@@ -1,22 +1,50 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/common/header/header.component';
-import { HotelesHomeComponent } from './components/hoteles/hoteles-home/hoteles-home.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {AppComponent} from './app.component';
+import {HeaderComponent} from './components/common/header/header.component';
+import {HotelesHomeComponent} from './components/hoteles/hoteles-home/hoteles-home.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {LayoutModule} from '@angular/cdk/layout';
+import {HttpClientModule} from "@angular/common/http";
+
+import {FlexLayoutModule} from '@angular/flex-layout';
+
+import {MatToolbarModule} from '@angular/material';
+import {MatIconModule} from '@angular/material/icon';
+import {MatCardModule} from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
+
+
+import { HotelesCardComponent } from './components/hoteles/hoteles-card/hoteles-card.component';
+import { HotelesListComponent } from './components/hoteles/hoteles-list/hoteles-list.component';
+import { HotelesFilterComponent } from './components/hoteles/hoteles-filter/hoteles-filter.component';
+import { StarsComponent } from './components/common/stars/stars.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    HotelesHomeComponent
+    HotelesHomeComponent,
+    HotelesCardComponent,
+    HotelesListComponent,
+    HotelesFilterComponent,
+    StarsComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    LayoutModule,
+    FlexLayoutModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatCardModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

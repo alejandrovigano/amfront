@@ -1,0 +1,80 @@
+.container {
+  background-color: #FFFFFF;
+}
+
+.mat-card {
+  padding: 10px;
+}
+
+.hotel-img {
+  max-height: 200px;
+  overflow: hidden;
+}
+
+.hotel-img img {
+  width: 300px;
+}
+
+.hotel-img-xs{
+  max-height: 250px;
+}
+
+.hotel-img-xs img{
+  width: 100%;
+}
+
+.hotel-attr{
+  margin: 0px;
+}
+
+.hotel-titulo p{
+  font-size: 1em;
+  margin: 0px;
+  font-weight: 500;
+  color: #008dcb;
+}
+
+.mat-icon{
+  padding-right: 10px;
+}
+
+.label-precio{
+  display: block;
+}
+.label-precio span{
+  text-align: center;
+  font-size: 0.8em;
+}
+
+.precio{
+  color: #F95B00;
+}
+
+.precio .moneda{
+  font-size: 1.2em;
+}
+
+.precio .importe{
+  font-size: 1.9em;
+  font-weight: bold;
+}
+
+.ver-hotel button{
+  min-width: 80%;
+  font-size: 1.3em;
+  background-color: #1B0D76;
+}
+
+.hotel-precio-detalle{
+  margin: 20px 0px;
+}
+
+.divisor{
+  border-left: dashed #989898;
+  border-width: 0 1px;
+}
+
+.divisor.divisor-xs{
+  border-top: dashed #989898;
+  border-width: 1px 0;
+}

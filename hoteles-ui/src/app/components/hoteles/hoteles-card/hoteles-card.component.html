@@ -1,0 +1,38 @@
+<div class="container">
+  <mat-card>
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="15px">
+      <div class="hotel-img" ngClass.xs="hotel-img-xs" fxFlex="30" fxFlex.xs="">
+        <img src="/assets/images/hotels/{{hotel.image}}" alt="Photo of a Shiba Inu">
+      </div>
+      <div fxFlex="40" fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="10px" >
+        <div fxFlex="15px" fxFlex.xs="20px" class="hotel-titulo hotel-attr">
+          <p>
+            {{hotel.name}}
+          </p>
+        </div>
+        <div fxFlex="30px" class="hotel-calificacion hotel-attr">
+          <app-stars [stars]="hotel.stars"></app-stars>
+        </div>
+        <div class="hotel-comodidades hotel-attr">
+          <mat-icon *ngFor="let amenity of hotel.amenities" [svgIcon]="amenity"></mat-icon>
+        </div>
+
+      </div>
+      <div class="divisor" ngClass.xs="divisor-xs" fxFlex="1">
+      </div>
+      <div class="hotel-precio-detalle" fxFlex="29" fxLayout="column" fxLayoutGap="0px" fxLayoutAlign="center center">
+        <div class="label-precio" fxFlex>
+          <span>Precio por noche por </span><span>habitación</span>
+        </div>
+        <div class="precio" fxLayout="row" fxFlex fxLayoutGap="5px" fxLayoutAlign="center center">
+          <div class="moneda" fxFlex><span>ARS</span></div>
+          <div class="importe" fxFlex><span>{{hotel.price}}</span></div>
+        </div>
+        <div class="ver-hotel" fxFlex>
+          <button mat-raised-button color="primary">Ver hotel</button>
+        </div>
+
+      </div>
+    </div>
+  </mat-card>
+</div>
