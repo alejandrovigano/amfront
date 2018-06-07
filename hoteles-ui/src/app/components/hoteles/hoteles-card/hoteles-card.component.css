@@ -38,12 +38,13 @@
   padding-right: 10px;
 }
 
-.label-precio{
-  display: block;
-}
 .label-precio span{
+  display: block;
   text-align: center;
   font-size: 0.8em;
+}
+.label-precio-xs span{
+  display: inline-block;
 }
 
 .precio{
@@ -67,6 +68,10 @@
 
 .hotel-precio-detalle{
   margin: 20px 0px;
+}
+
+.hotel-precio-detalle-xs{
+  margin: 0px 0px;
 }
 
 .divisor{

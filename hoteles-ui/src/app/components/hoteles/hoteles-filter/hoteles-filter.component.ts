@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HotelesFilterComponent implements OnInit {
 
+  name : string;
+  stars : number;
+
   constructor() { }
 
   ngOnInit() {
+    this.name = "asdfx";
   }
 
 }

@@ -7,6 +7,7 @@ import {HotelesHomeComponent} from './components/hoteles/hoteles-home/hoteles-ho
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {LayoutModule} from '@angular/cdk/layout';
 import {HttpClientModule} from "@angular/common/http";
+import {FormsModule} from "@angular/forms";
 
 import {FlexLayoutModule} from '@angular/flex-layout';
 
@@ -19,6 +20,8 @@ import {MatButtonModule} from '@angular/material/button';
 import { HotelesCardComponent } from './components/hoteles/hoteles-card/hoteles-card.component';
 import { HotelesListComponent } from './components/hoteles/hoteles-list/hoteles-list.component';
 import { HotelesFilterComponent } from './components/hoteles/hoteles-filter/hoteles-filter.component';
+import {MatExpansionModule} from '@angular/material/expansion';
+
 import { StarsComponent } from './components/common/stars/stars.component';
 
 
@@ -41,7 +44,9 @@ import { StarsComponent } from './components/common/stars/stars.component';
     MatToolbarModule,
     MatIconModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    MatExpansionModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,7 +1,7 @@
 <div class="container">
   <mat-card>
     <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="15px">
-      <div class="hotel-img" ngClass.xs="hotel-img-xs" fxFlex="30" fxFlex.xs="">
+      <div class="hotel-img" ngClass.xs="hotel-img-xs" fxFlex="30" fxFlex.xs="250px">
         <img src="/assets/images/hotels/{{hotel.image}}" alt="Photo of a Shiba Inu">
       </div>
       <div fxFlex="40" fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="10px" >
@@ -20,8 +20,8 @@
       </div>
       <div class="divisor" ngClass.xs="divisor-xs" fxFlex="1">
       </div>
-      <div class="hotel-precio-detalle" fxFlex="29" fxLayout="column" fxLayoutGap="0px" fxLayoutAlign="center center">
-        <div class="label-precio" fxFlex>
+      <div class="hotel-precio-detalle" ngClass.xs="hotel-precio-detalle-xs" fxFlex="29" fxLayout="column" fxLayoutGap="10px" fxLayoutAlign="center center">
+        <div class="label-precio" ngClass.xs="label-precio-xs" fxFlex>
           <span>Precio por noche por </span><span>habitación</span>
         </div>
         <div class="precio" fxLayout="row" fxFlex fxLayoutGap="5px" fxLayoutAlign="center center">

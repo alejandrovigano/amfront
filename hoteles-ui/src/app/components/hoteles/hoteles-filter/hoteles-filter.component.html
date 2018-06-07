@@ -1,3 +1,23 @@
-<p>
-  hoteles-filter works!
-</p>
+<div class="container">
+    <mat-card>
+      Filtros
+    </mat-card>
+    <mat-accordion [multi]="true">
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Nombre del hotel
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <input [ngModel]="name">
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Estrellas
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>I'm visible because I am open</p>
+      </mat-expansion-panel>
+    </mat-accordion>
+</div>
