@@ -24,6 +24,9 @@ import {HotelesListComponent} from './components/hoteles/hoteles-list/hoteles-li
 import {HotelesFilterComponent} from './components/hoteles/hoteles-filter/hoteles-filter.component';
 
 import {StarsComponent} from './components/common/stars/stars.component';
+import { LoadingComponent } from './components/common/loading/loading.component';
+
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -33,7 +36,8 @@ import {StarsComponent} from './components/common/stars/stars.component';
     HotelesCardComponent,
     HotelesListComponent,
     HotelesFilterComponent,
-    StarsComponent
+    StarsComponent,
+    LoadingComponent
   ],
   imports: [
     HttpClientModule,
@@ -41,6 +45,7 @@ import {StarsComponent} from './components/common/stars/stars.component';
     BrowserAnimationsModule,
     LayoutModule,
     FlexLayoutModule,
+    MatProgressSpinnerModule,
     MatToolbarModule,
     MatIconModule,
     MatCardModule,

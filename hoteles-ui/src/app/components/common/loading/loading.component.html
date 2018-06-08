@@ -1,0 +1,7 @@
+<div fxLayout="start center" *ngIf="loading">
+  <div fxFlex="">
+    <mat-spinner></mat-spinner>
+  </div>
+</div>
+<ng-content *ngIf="!loading"></ng-content>
+

@@ -10,10 +10,15 @@ import {HotelesServiceService} from "../../../services/hoteles-service.service";
 export class HotelesListComponent implements OnInit {
 
   hoteles:Hotel[];
+  loading:boolean;
 
   constructor(private hotelesServiceService:HotelesServiceService) {
+    this.hotelesServiceService.startSearch.subscribe(() =>{
+      this.loading = true;
+    })
     this.hotelesServiceService.refreshList.subscribe(hoteles => {
       this.hoteles = hoteles;
+      this.loading = false;
     });
   }
 

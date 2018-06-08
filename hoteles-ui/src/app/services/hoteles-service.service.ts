@@ -15,6 +15,7 @@ export class HotelesServiceService {
   }
 
   @Output() refreshList: EventEmitter<Hotel[]> = new EventEmitter();
+  @Output() startSearch: EventEmitter<void> = new EventEmitter();
 
   search(name:string, stars: number[]){
 
@@ -22,6 +23,7 @@ export class HotelesServiceService {
       .append('name', name)
       .append('stars', stars.join(','));
 
+    this.startSearch.emit();
     this.http.get<Hotel[]>(this.env.hotelesApiUrl, { params : params }).subscribe(value => {
       this.refreshList.emit(value)
     })

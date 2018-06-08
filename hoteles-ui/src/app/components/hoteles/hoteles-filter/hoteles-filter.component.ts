@@ -43,12 +43,12 @@ export class HotelesFilterComponent implements OnInit {
   }
 
   doSearch() {
+    let name = this.name ? this.name : '';
     let stars:number[] = this.getStars();
-    this.hotelService.search( this.name, stars );
+    this.hotelService.search( name, stars );
   }
 
   doCleanSearch() {
-    this.name="Club";
     this.selectAll();
     this.doSearch();
   }

@@ -7,7 +7,6 @@ COPY package.json .
 COPY package-lock.json .
 RUN npm install
 COPY . .
-RUN ls
 
 RUN ng build --prod
 
