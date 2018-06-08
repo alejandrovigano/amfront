@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" *ngIf="!media.isActive('xs')">
   <mat-card>
     Filtros
   </mat-card>
@@ -16,13 +16,11 @@
           </div>
         </mat-panel-title>
       </mat-expansion-panel-header>
-      <div fxLayout="row" fxLayoutAlign="center center">
+      <div fxLayout="row" fxLayout.md="column" fxLayout.sm="column"  fxLayoutAlign="center center" fxLayoutGap="15px">
         <div fxFlex="70">
-          <input class="input-name" placeholder="Ingrese el nombre del hotel" [(ngModel)]="name">
+          <input class="input-name" (keyup.enter)="doSearch()" placeholder="Ingrese el nombre del hotel" [(ngModel)]="name">
         </div>
-        <div fxFlex="30">
-          <button class="search" (click)="doSearch()" mat-raised-button color="primary">Aceptar</button>
-        </div>
+        <button fxFlex="30" class="search" (click)="doSearch()" mat-raised-button color="primary">Aceptar</button>
       </div>
     </mat-expansion-panel>
     <mat-expansion-panel [expanded]="true">
@@ -68,6 +66,57 @@
             <app-stars [stars]="1"></app-stars>
           </mat-checkbox>
         </div>
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>
+
+<!--Mobile-->
+
+<div class="container xs"  *ngIf="media.isActive('xs')">
+  <mat-accordion [multi]="true">
+    <mat-expansion-panel class="filter-panel-xs" [expanded]="false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <span>Filtros</span>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <div fxLayout="column" fxLayoutGap="15px">
+        <input fxFlex="" class="input-name" placeholder="Ingrese el nombre del hotel" [(ngModel)]="name">
+
+        <div fxFlex>
+          <mat-checkbox class="stars-check" [(ngModel)]="starAll" (change)="selectAll()">Todas las estrellas
+          </mat-checkbox>
+        </div>
+        <div fxFlex>
+          <mat-checkbox class="stars-check" [(ngModel)]="star5" (change)="unselectAll()">
+            <app-stars [stars]="5"></app-stars>
+          </mat-checkbox>
+        </div>
+        <div fxFlex>
+          <mat-checkbox class="stars-check" [(ngModel)]="star4" (change)="unselectAll()">
+            <app-stars [stars]="4"></app-stars>
+          </mat-checkbox>
+        </div>
+        <div fxFlex>
+          <mat-checkbox class="stars-check" [(ngModel)]="star3" (change)="unselectAll()">
+            <app-stars [stars]="3"></app-stars>
+          </mat-checkbox>
+        </div>
+        <div fxFlex>
+          <mat-checkbox class="stars-check" [(ngModel)]="star2" (change)="unselectAll()">
+            <app-stars [stars]="2"></app-stars>
+          </mat-checkbox>
+        </div>
+        <div fxFlex>
+          <mat-checkbox class="stars-check" [(ngModel)]="star1" (change)="unselectAll()">
+            <app-stars [stars]="1"></app-stars>
+          </mat-checkbox>
+        </div>
+
+        <button fxFlex class="search" (click)="doSearch()" mat-raised-button color="primary">Aceptar</button>
+
       </div>
     </mat-expansion-panel>
   </mat-accordion>

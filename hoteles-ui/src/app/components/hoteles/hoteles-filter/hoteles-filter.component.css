@@ -19,6 +19,7 @@
 
 .mat-card{
   font-weight: 500;
+  padding: 15px 24px
 }
 
 .mat-icon{
@@ -33,4 +34,16 @@
 
 button.search{
   background-color: #1A0C71;
+}
+.xs.container{
+  margin: 0px -25px;
+}
+
+/*panel expandido*/
+.xs .filter-panel-xs.mat-expanded.mat-expansion-panel-spacing{
+  margin-bottom: 20px;
+}
+
+.xs input{
+  width: 100%;
 }

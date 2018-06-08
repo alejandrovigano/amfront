@@ -14,7 +14,7 @@ module.exports = {
                 query.stars = { "$in": stars }
             }
 
-            return await Hotel.find(query).exec();
+            return await Hotel.find(query).sort({stars: -1}).exec();
         } catch (err) {
             throw err;
         }

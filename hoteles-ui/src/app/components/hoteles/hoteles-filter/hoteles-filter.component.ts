@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {MatIconRegistry} from "@angular/material";
 import {DomSanitizer} from "@angular/platform-browser";
 import {HotelesServiceService} from "../../../services/hoteles-service.service";
+import {ObservableMedia} from "@angular/flex-layout";
 
 @Component({
   selector: 'app-hoteles-filter',
@@ -18,14 +19,14 @@ export class HotelesFilterComponent implements OnInit {
   star2: boolean;
   star1: boolean;
 
-  constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer, private hotelService:HotelesServiceService) {
+  constructor(public media: ObservableMedia,iconRegistry: MatIconRegistry, sanitizer: DomSanitizer, private hotelService:HotelesServiceService) {
     this.selectAll();
     iconRegistry.addSvgIcon('search', sanitizer.bypassSecurityTrustResourceUrl('assets/icons/filters/search.svg'));
     iconRegistry.addSvgIcon('star', sanitizer.bypassSecurityTrustResourceUrl('assets/icons/filters/star.svg'));
   }
 
   ngOnInit() {
-    this.doSearch();
+    //this.doSearch();
   }
 
   selectAll(){
@@ -47,7 +48,7 @@ export class HotelesFilterComponent implements OnInit {
   }
 
   doCleanSearch() {
-    this.name="";
+    this.name="Club";
     this.selectAll();
     this.doSearch();
   }
