@@ -1,0 +1,16 @@
+version: '3'
+services:
+  api:
+    build: hoteles-api
+    ports:
+     - "3000:3000"
+    depends_on:
+     - 'mongo'
+  web:
+    build: hoteles-ui
+    ports:
+     - "8080:8080"
+  mongo:
+    image: 'mongo:3.4.1'
+    ports:
+      - '27017:27017'

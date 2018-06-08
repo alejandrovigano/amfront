@@ -15,12 +15,13 @@ import {MatToolbarModule} from '@angular/material';
 import {MatIconModule} from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 
 import { HotelesCardComponent } from './components/hoteles/hoteles-card/hoteles-card.component';
 import { HotelesListComponent } from './components/hoteles/hoteles-list/hoteles-list.component';
 import { HotelesFilterComponent } from './components/hoteles/hoteles-filter/hoteles-filter.component';
-import {MatExpansionModule} from '@angular/material/expansion';
 
 import { StarsComponent } from './components/common/stars/stars.component';
 
@@ -46,6 +47,7 @@ import { StarsComponent } from './components/common/stars/stars.component';
     MatCardModule,
     MatButtonModule,
     MatExpansionModule,
+    MatCheckboxModule,
     FormsModule
   ],
   providers: [],

@@ -6,3 +6,7 @@
   min-width: 200px;
   min-height: 100px;
 }
+
+header{
+  border-bottom: solid #517699;
+}

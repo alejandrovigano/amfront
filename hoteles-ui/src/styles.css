@@ -5,3 +5,8 @@ body {
   margin: 0;
   background-color: #F4F4F4;
 }
+
+/*Fix angular material mat-checkbox no margin*/
+span.mat-checkbox-label {
+  padding-left: 5px;
+}
