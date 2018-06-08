@@ -1,14 +1,14 @@
-const config = require('./../config');
 const mongoose = require('mongoose');
 const app = require('../app');
 
-const port = normalizePort(config.port || '3000');
+const port = normalizePort('3000');
 const server = app.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
 
 //conectarme a mongo
-mongoose.connect('mongodb://mongo:27017');
+console.log(process.env.MONGO_CONN);
+mongoose.connect(process.env.MONGO_CONN);
 
 //abro conexion
 var db = mongoose.connection;

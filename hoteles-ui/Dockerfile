@@ -8,11 +8,9 @@ COPY package-lock.json .
 RUN npm install
 COPY . .
 
-RUN ng build --prod
-
 ADD entrypoint.sh .
 RUN chmod +x entrypoint.sh
 
-ENV NODE_OPTS=""
+ENV API_URL=""
 
 ENTRYPOINT ["/App/entrypoint.sh"]

@@ -2,4 +2,5 @@
 echo $NODE_OPTS
 echo npm start
 
-npm start $NODE_OPTS
+set MONGO_CONN=$MONGO_CONN
+npm start
